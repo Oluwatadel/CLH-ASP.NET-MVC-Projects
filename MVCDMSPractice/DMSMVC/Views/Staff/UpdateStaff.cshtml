@@ -1,0 +1,75 @@
+﻿@using DMSMVC.Models.DTOs
+@model DMSMVC.Models.DTOs.BaseResponse<DMSMVC.Models.DTOs.StaffDto>
+
+@{
+    Layout = "_Layout2";
+    IEnumerable<DepartmentDTO> departments = (List<DepartmentDTO>)TempData["Departments"];
+
+}
+
+<div class="container">
+    <div class="reg">
+        <h2>Update Staff</h2>
+    </div>
+    <form class="wrapper" method="post" enctype="multipart/form-data">
+
+        <div class="form-control" hidden>
+            <label hidden>@Model.Data!.Id</label>
+            <input class="input" type="text" asp-for="@Model.Data.Id" hidden>
+        </div>
+
+        <div class="form-control">
+            <label> Last Name</label>
+            <input class="input" type="text" asp-for="@Model.Data.LastName" placeholder="@Model.Data.LastName">
+        </div>
+        
+        <div class="form-control">
+            <label> First Name</label>
+            <input class="input" type="text" asp-for="@Model.Data.LastName" placeholder="@Model.Data.LastName">
+        </div>
+        
+        <div class="form-control">
+            <label> Email</label>
+            <input class="input" type="text" asp-for="@Model.Data.Email" placeholder="@Model.Data.Email">
+        </div>
+
+        <div class="form-control">
+            <label>Gender</label>
+            <select class="gender" asp-for="@Model.Data.Gender" asp-items="@Html.GetEnumSelectList(typeof(GenderEnum))"></select>
+        </div>
+
+        <div class="form-control">
+            <label> Staff No</label>
+            <input class="input" type="text" asp-for="@Model.Data.StaffNumber" placeholder="@Model.Data.StaffNumber" readonly>
+        </div>
+        
+        <div class="form-control">
+            <label> Level</label>
+            <input class="input" type="text" asp-for="@Model.Data.Level" placeholder="@Model.Data.Level" readonly>
+        </div>
+        
+
+
+        <div class="form-control">
+            <label>Department</label>
+            
+            @Html.DropDownList("Departments", new SelectList(departments, departments.FirstOrDefault().DepartmentName),"Select Department")
+            @* <select class="departments" asp-for="@Model.Data.DepartmentName">
+                <option>Select Department</option>
+                @foreach (var department in (ICollection<DepartmentDTO>)TempData["Departments"])
+                {
+                    <option>@department.DepartmentName</option>
+                }
+            </select> *@
+        </div>
+
+        <div class="imageUpload">
+            <label>Image</label>
+            <input type="file" asp-for="@Model.Data.ImageUrl"/>
+        </div>
+
+        <div class="form-control">
+            <input class="submit" type="submit" value="Submit">
+        </div>
+    </form>
+</div>

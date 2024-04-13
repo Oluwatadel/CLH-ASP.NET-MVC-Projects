@@ -1,0 +1,23 @@
+﻿@using MyMVC_Practice.Models.ViewModels
+@{
+    ViewData["Title"] = "About Staff";
+}
+
+@model IEnumerable<StaffViewModel>
+
+<div>
+    <h2>Staff Profile</h2>
+    <div></div>
+    @foreach(var staff in Model)
+    {
+        <div>
+            <h4>@staff.FirstName + @staff.LastName</h4>
+            <h6>@staff.StaffNumber</h6>
+            <p>@staff.Department</p>
+            <p>@staff.PhoneNumber</p>
+            <p>@staff.Level</p>
+            <p>@staff.Position</p>
+        </div>
+    }
+    
+</div>

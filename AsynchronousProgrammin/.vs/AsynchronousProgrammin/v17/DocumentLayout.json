@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\AsynchronousProgrammin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D87F335-FEBF-4CA6-863C-E44A2903B768}|AsynchronousProgrammin.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\asynchronousprogrammin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D87F335-FEBF-4CA6-863C-E44A2903B768}|AsynchronousProgrammin.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\AsynchronousProgrammin\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\AsynchronousProgrammin\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T13:30:51.266Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+﻿@model DMSMVC.Models.DTOs.UserRequestModel
+@using DMSMVC.Models.DTOs
+@using DMSMVC.Models.Enum;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/Register.css">
+</head>
+<body>
+   @if(Model != null)
+{
+        <h3>Registration successfull</h3>
+    }
+    else
+    {
+        <div class="container">
+            <div class="reg">
+                <h2>Registration Form</h2>
+            </div>
+            <form class="wrapper" method="post" enctype="multipart/form-data">
+                <div class="form-control">
+                    <label>First Name</label>
+                    <input class="input" type="text" name="FirstName" placeholder="First Name" required>
+                </div>
+                <div class="form-control">
+                    <label>Last Name</label>
+                    <input type="text" name="LastName" id="" placeholder="Last Name" required>
+                </div>
+                <div class="form-control">
+                    <label>Phone Number</label>
+                    <input type="tel" name="PhoneNumber" id="" placeholder="Phone Number" required>
+                </div>
+                <div class="form-control">
+                    <label>Gender</label>
+                    <select class="gender" asp-for="Gender" asp-items="@Html.GetEnumSelectList(typeof(GenderEnum))"></select>
+                </div>
+                <div class="form-control">
+                    <label>Email</label>
+                    <input type="email" name="Email" id="" placeholder="email" required>
+                </div>
+                <div class="form-control">
+                    <label>Password</label>
+                    <input type="password" name="Password" id="" placeholder="password" required>
+                </div>
+                <div class="form-control">
+                    <label>Confirm Password</label>
+                    <input type="password" name="ConfirmPassword" id="" placeholder="confirm password" required>
+                </div>
+                <div class="form-control">
+                    <label>Security Question</label>
+                    <input type="text" name="SecurityQuestion" id="" placeholder="Enter your Security Question" required>
+                </div>
+                <div class="form-control">
+                    <label>Security Answer</label>
+                    <input type="text" name="SecurityAnswer" id="" placeholder="Enter your Security Answer" required>
+                </div>
+                
+                <div class="form-control">
+                    <label>Staff Number</label>
+                    <input type="text" name="StaffNumber" id="" placeholder="Enter your staffNumber" required>
+                </div>
+                <div class="form-control">
+                    <label>Grade Level</label>
+                    <input type="text" name="Level" id="" placeholder="Enter your grade level" required>
+                </div>
+                <div class="form-control">
+                    <label>Your department</label>
+                    <select class="departments" asp-for="DepartmentName">
+                        <option>Select Department</option>
+                            @foreach(var department in (ICollection<DepartmentDTO>)TempData["Departments"]!)
+                            {
+                                <option>@department.DepartmentName</option>
+                            }
+                    </select>
+                </div>
+                <div class ="imageUpload">
+                    <label>Image</label>
+                    <input type="file" name="ProfilePhotoUrl" required />
+                </div>
+                <div class="form-control">
+                    <a href="http://"><input class="submit" type="submit" value="Register"></a>
+                </div>
+                <span class="login">Already have an account?  <a asp-action="Login" asp-controller="User">Login</a></span>
+
+            </form>
+        </div>
+    }
+</body>
+</html>

@@ -1,0 +1,261 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\views\\about\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:views\\about\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\views\\about\\aboutstaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:views\\about\\aboutstaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\models\\viewmodels\\staffviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:models\\viewmodels\\staffviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\models\\service\\implementation\\staffservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:models\\service\\implementation\\staffservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\context\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:context\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\models\\service\\interface\\istaffservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:models\\service\\interface\\istaffservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\repository\\implementations\\staffrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:repository\\implementations\\staffrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\repository\\interfaces\\istaffrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:repository\\interfaces\\istaffrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\mymvc practice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3D28BC4-8A3D-4BBC-BE71-0953DE19F87E}|MyMVC Practice.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-07T10:45:48.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Models\\Staff.cs",
+              "RelativeDocumentMoniker": "Models\\Staff.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Models\\Staff.cs",
+              "RelativeToolTip": "Models\\Staff.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T19:15:17.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StaffViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Models\\ViewModels\\StaffViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\StaffViewModel.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Models\\ViewModels\\StaffViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\StaffViewModel.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T07:22:02.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AboutStaff.cshtml",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Views\\About\\AboutStaff.cshtml",
+              "RelativeDocumentMoniker": "Views\\About\\AboutStaff.cshtml",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Views\\About\\AboutStaff.cshtml",
+              "RelativeToolTip": "Views\\About\\AboutStaff.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-07T06:51:16.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StaffService.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Models\\Service\\Implementation\\StaffService.cs",
+              "RelativeDocumentMoniker": "Models\\Service\\Implementation\\StaffService.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Models\\Service\\Implementation\\StaffService.cs",
+              "RelativeToolTip": "Models\\Service\\Implementation\\StaffService.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAACQAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T21:10:24.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IstaffService.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Models\\Service\\Interface\\IstaffService.cs",
+              "RelativeDocumentMoniker": "Models\\Service\\Interface\\IstaffService.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Models\\Service\\Interface\\IstaffService.cs",
+              "RelativeToolTip": "Models\\Service\\Interface\\IstaffService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T21:03:20.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataBase.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Context\\DataBase.cs",
+              "RelativeDocumentMoniker": "Context\\DataBase.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Context\\DataBase.cs",
+              "RelativeToolTip": "Context\\DataBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T20:47:56.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StaffRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Repository\\Implementations\\StaffRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Implementations\\StaffRepository.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Repository\\Implementations\\StaffRepository.cs",
+              "RelativeToolTip": "Repository\\Implementations\\StaffRepository.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwCAAAABnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T20:44:53.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IStaffRepository.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Repository\\Interfaces\\IStaffRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Interfaces\\IStaffRepository.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Repository\\Interfaces\\IStaffRepository.cs",
+              "RelativeToolTip": "Repository\\Interfaces\\IStaffRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T20:39:09.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACIAAAB1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-06T19:36:45.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-06T19:23:18.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Views\\About\\About.cshtml",
+              "RelativeDocumentMoniker": "Views\\About\\About.cshtml",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Views\\About\\About.cshtml",
+              "RelativeToolTip": "Views\\About\\About.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAABEAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-06T19:07:48.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AboutController.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Controllers\\AboutController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AboutController.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Controllers\\AboutController.cs",
+              "RelativeToolTip": "Controllers\\AboutController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T19:06:11.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T19:05:17.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MyMVC Practice\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T18:37:00.827Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

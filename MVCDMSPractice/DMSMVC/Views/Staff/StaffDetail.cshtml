@@ -1,0 +1,27 @@
+﻿@model DMSMVC.Models.DTOs.StaffDto
+@{
+    Layout = "_Layout2";
+}
+
+
+
+<div class="detail-container">
+    <div class="image">
+        <img src="@Model.ImageUrl" />
+    </div>
+    <div class="inner-container">
+        <div class="details">
+            <p hidden>@Model.Id</p>
+            <h3>@Model.LastName @Model.FirstName</h3>
+            <p>Email: @Model.Email</p>
+            <p>Gender: @Model.Gender</p>
+            <p>Staff No: @Model.StaffNumber</p>
+            <p>Position: @Model.Position</p>
+            <p>Level: @Model.Level</p>
+            <p>Department: @Model.DepartmentName</p>
+        </div>
+        <div class="btn">
+            <a asp-action="UpdateStaff" asp-controller="Staff" asp-route-id="@Model.Id">Update Staff</a>
+        </div>
+    </div>
+</div>

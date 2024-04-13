@@ -1,0 +1,95 @@
+SDLC - Software Development Life Circle
+========================================
+ 
+you can register your company
+register and upload the categories and products you have
+
+customer
+can search by category and name and price range
+
+Delivery person
+
+
+=============================
+|    Requirements	    |
+=============================
+
+Customer
+==========
+1. Customer can search Product, Brand and Category
+2. Customer can see categories and sub catgories of products
+3. Customer create an account
+4. Customer can sign in
+5. Customer can view orders
+6. Customer can view saved items
+7. Customer can add to cart
+7. Customer view cart
+8. Can view product details
+9. Customer can assproduct to cart
+10. Customer can make payment to fro cart item
+11. Customer can report product 
+12. Can rate a product
+
+A shop owner is also a seller
+==============================
+1. Can sign in
+2. Can create an account
+3. Can add product 
+4. Can view product
+5. Can update product details
+6.Can view purchase order
+7. Can view product payment
+
+
+Admin
+======================
+1.Admin can create and add category
+2.Admin can add brand
+3.Admin can add product
+4. Admin can view product
+5. Can view sellers and customers
+6. Can view orders
+7. Can view payments
+8. Can block sellers
+
+Delivery personnel
+=============================
+
+
+
+
+Story of Customer
+==========================
+1. Customer can search Product, Brand and Category
+	=
+2. Customer can see categories and sub catgories of products
+3. Customer create an account
+4. Customer can sign in
+5. Customer can view orders
+6. Customer can view saved items
+7. Customer view cart
+8. Can view product details
+9. Customer can assproduct to cart
+10. Customer can make payment to fro cart item
+11. Customer can report product 
+12. Can rate a product
+
+
+
+Domain Entities
+=======================
+1. Categories
+  = Id
+  = Nmae
+  = Description   ===there will be all category of drop down and if anyone is picked it will pick its id
+  = Category Id
+2. Products
+  =
+3. Brands
+4. Products
+5. Seller (id==nullable)
+6. Customer
+7. Order
+8. Payment
+9. User (registering an account means u are registering as a user)\
+10.cart

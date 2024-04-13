@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\OptimizationApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9767ADA8-068D-47B8-BA5D-134139C7E3F5}|OptimizationApp\\OptimizationApp.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\optimizationapp\\optimizationapp\\infra\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9767ADA8-068D-47B8-BA5D-134139C7E3F5}|OptimizationApp\\OptimizationApp.csproj|solutionrelative:optimizationapp\\infra\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9767ADA8-068D-47B8-BA5D-134139C7E3F5}|OptimizationApp\\OptimizationApp.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\optimizationapp\\optimizationapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9767ADA8-068D-47B8-BA5D-134139C7E3F5}|OptimizationApp\\OptimizationApp.csproj|solutionrelative:optimizationapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9767ADA8-068D-47B8-BA5D-134139C7E3F5}|OptimizationApp\\OptimizationApp.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\optimizationapp\\optimizationapp\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9767ADA8-068D-47B8-BA5D-134139C7E3F5}|OptimizationApp\\OptimizationApp.csproj|solutionrelative:optimizationapp\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9767ADA8-068D-47B8-BA5D-134139C7E3F5}|OptimizationApp\\OptimizationApp.csproj|c:\\users\\airis technovation\\onedrive\\codelearnershub\\csharp-journey\\classes in sprint\\aspdotnet\\optimizationapp\\optimizationapp\\migrations\\20240318154857_addindextostudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9767ADA8-068D-47B8-BA5D-134139C7E3F5}|OptimizationApp\\OptimizationApp.csproj|solutionrelative:optimizationapp\\migrations\\20240318154857_addindextostudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20240318154857_AddIndexToStudent.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\OptimizationApp\\OptimizationApp\\Migrations\\20240318154857_AddIndexToStudent.cs",
+              "RelativeDocumentMoniker": "OptimizationApp\\Migrations\\20240318154857_AddIndexToStudent.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\OptimizationApp\\OptimizationApp\\Migrations\\20240318154857_AddIndexToStudent.cs",
+              "RelativeToolTip": "OptimizationApp\\Migrations\\20240318154857_AddIndexToStudent.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAAB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T20:06:44.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\OptimizationApp\\OptimizationApp\\Infra\\ApplicationDBContext.cs",
+              "RelativeDocumentMoniker": "OptimizationApp\\Infra\\ApplicationDBContext.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\OptimizationApp\\OptimizationApp\\Infra\\ApplicationDBContext.cs",
+              "RelativeToolTip": "OptimizationApp\\Infra\\ApplicationDBContext.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAuwBcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T20:06:44.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\OptimizationApp\\OptimizationApp\\Model\\Student.cs",
+              "RelativeDocumentMoniker": "OptimizationApp\\Model\\Student.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\OptimizationApp\\OptimizationApp\\Model\\Student.cs",
+              "RelativeToolTip": "OptimizationApp\\Model\\Student.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T20:06:44.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\OptimizationApp\\OptimizationApp\\Program.cs",
+              "RelativeDocumentMoniker": "OptimizationApp\\Program.cs",
+              "ToolTip": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\OptimizationApp\\OptimizationApp\\Program.cs",
+              "RelativeToolTip": "OptimizationApp\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAiwB0AAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T20:06:44.937Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

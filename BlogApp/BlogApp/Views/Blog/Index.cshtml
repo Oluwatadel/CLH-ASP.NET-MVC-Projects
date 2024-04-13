@@ -1,0 +1,57 @@
+﻿@model BlogApp.Models.ViewModels.BlogsResponse;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="AddBlog">Create New</a>
+</p>
+@if(TempData["SuccessMessage"] != null)
+{
+   <div class="alert alert-success">
+        @TempData["SuccessMessage"].ToString()
+   </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                S/N
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{int i = 0;}
+@foreach (var item in Model.Data) {
+            <tr>
+                <td>
+                @{++i;}
+                @i
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <a asp-action="UpdateBlog" asp-route-id="@item.Id">Edit</a> |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                <a asp-action="DeleteBlog" asp-route-id="@item.Id">Delete</a> |
+                <a asp-controller="Post" asp-action="ViewPosts" asp-route-blogId="@item.Id">View Posts</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
