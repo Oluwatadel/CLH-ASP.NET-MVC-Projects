@@ -1,5 +1,6 @@
 ﻿using DMSMVC.Models.DTOs;
 using DMSMVC.Models.Entities;
+using DMSMVC.Models.RequestModel;
 using DMSMVC.Repository.Implementation;
 using DMSMVC.Repository.Interface;
 using DMSMVC.Service.Interface;
@@ -149,7 +150,7 @@ namespace DMSMVC.Service.Implementation
             var previousHOD = await _staffRepository.GetAsync(a => a.StaffNumber == previousHodStaffNumber);
 
             //Set previousHod's position to staff
-            previousHOD.Position = "Staff";
+            previousHOD.Role = "Staff";
 
             //set new HOD
 			department.HeadOfDepartmentStaffNumber = staffNumber;
@@ -157,14 +158,14 @@ namespace DMSMVC.Service.Implementation
             //Get the Staff entity of the new HOD using his staffNumber
             var newHOD = department.Staffs
                 .SingleOrDefault(a => a.StaffNumber == staffNumber);
-			newHOD!.Position = "Director";
+			newHOD!.Role = "Director";
 			await _unitOfWork.SaveAsync();
 
 
 			return new BaseResponse<DepartmentDTO>
             {
                 Status = true,
-                Message = $"Mr {newHOD.User.LastName} {newHOD.User.FirstName} is now the director of {department.DepartmentName}",
+                Message = $"Mr {newHOD.LastName} {newHOD.FirstName} is now the director of {department.DepartmentName}",
                 Data = new DepartmentDTO
                 {
                     Id = department.Id,

@@ -30,7 +30,12 @@ namespace DMSMVC.Context.EntityConfiguration
                     StaffNumber = "49419",
                     DepartmentId = "9a07d60f--4930-8e8b1629",
                     Level = "12",
-                    Position = "Staff",
+                    Role = "Admin",
+                    FirstName = "admin",
+                    LastName = "admin",
+                    Gender = GenderEnum.Unknown,
+                    PhoneNumber = "09038327372",
+
                 });
         }
     }

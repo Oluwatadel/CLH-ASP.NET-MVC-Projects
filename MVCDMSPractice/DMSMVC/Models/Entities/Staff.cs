@@ -10,9 +10,14 @@ namespace DMSMVC.Models.Entities
 {
     public class Staff : Base
     {
+         public string? FirstName { get; set; } = default!;
+        public string? LastName { get; set; } = default!;
+        public string? PhoneNumber { get; set; } = default!;
+        public GenderEnum? Gender { get; set; } = default!;
+        public string? ProfilePhotoUrl { get; set; } 
         public string StaffNumber { get; set; } = default!;
-        public string Level { get; set; }
-        public string Position { get; set; } = "Staff";
+        public string? Level { get; set; }
+        public string Role { get; set; } = "Staff";
         public Department Department { get; set; }
         public string DepartmentId { get; set; }
         public ICollection<Document> Documents { get; set; }

@@ -48,6 +48,12 @@ body {
     width: 60%;
 }
 
+.alert{
+    width: 10%;
+    padding: 10px;
+   background-color: aquamarine;
+}
+
 .reg {
     /* background-color:#36a19a ; */
     /*background-color: #282e44;*/

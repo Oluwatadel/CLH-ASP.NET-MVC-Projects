@@ -10,7 +10,8 @@ namespace DMSMVC.Models.DTOs
         public GenderEnum Gender { get; set; }
         public string? StaffNumber { get; set; }
         public string? Level { get; set; }
-        public string? Position { get; set; }
+        public string? Role { get; set; }
+        public string? phonenumber { get; set; }
         public string? DepartmentName { get; set; }
         public string? ImageUrl { get; set; }
     }

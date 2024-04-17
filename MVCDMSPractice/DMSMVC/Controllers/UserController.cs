@@ -1,4 +1,5 @@
 ﻿using DMSMVC.Models.DTOs;
+using DMSMVC.Models.RequestModel;
 using DMSMVC.Service.Interface;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -27,9 +28,7 @@ namespace Web.Controllers
         
         public IActionResult Login()
         {
-            //This is to bring back the login request when the login page is refreshed
-            var response = new LoginRequest();
-            return View(response);
+            return View();
         }
 
 
@@ -47,10 +46,10 @@ namespace Web.Controllers
             //Read on this
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, $"{user.LastName} {user.FirstName}"),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.NameIdentifier, user.Staff.DepartmentId.ToString()),
+                new Claim("Name", $"{user.LastName} {user.FirstName}"),
+                new Claim("Email", user.Email),
+                new Claim("Id", user.Id.ToString()),
+                new Claim("DepartmentId", user.Staff.DepartmentId.ToString()),
             };
 
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -70,10 +69,10 @@ namespace Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(UserRequestModel request)
+        public async Task<IActionResult> Register(LoginRequestModel request)
         {
-            var user = await _staffService.CreateAsync(request);
-            if(user == null)
+            var user = await _userService.(request);
+            if(user.Data == null)
 			{
                 TempData["Error"] = user.Message;
 				return View(request);

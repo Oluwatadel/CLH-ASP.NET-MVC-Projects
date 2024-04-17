@@ -1,135 +1,106 @@
 ﻿using DMSMVC.Models.DTOs;
 using DMSMVC.Models.Entities;
+using DMSMVC.Models.RequestModel;
 using DMSMVC.Repository.Implementation;
 using DMSMVC.Repository.Interface;
 using DMSMVC.Service.Interface;
 using Microsoft.AspNetCore.Identity;
+using Org.BouncyCastle.Asn1.Ocsp;
 using System.Linq.Expressions;
 
 namespace DMSMVC.Service.Implementation
 {
-	public class UserService : IUserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-		private readonly UserManager<User> _userManager;
+        private readonly IUnitOfWork _unitOfWork;
+        //private readonly UserManager<User> _userManager;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
 
             _userRepository = userRepository;
+            _unitOfWork = unitOfWork;
         }
 
-      
-        
 
-  //      public async Task<BaseResponse<UserDTO>> LoginAsync(LoginRequest loginRequest)
-  //      {
 
-		//	var userExist = _userRepository.IsExist(loginRequest.Email);
-		//	if (userExist)
-		//	{
-		//		var user = await _userRepository.GetAsync(a => a.Email == loginRequest.Email);
-		//		if (loginRequest.Password != user.Password)
-		//		{
-		//			return new BaseResponse<UserDTO>
-		//			{
-		//				Status = false,
-		//				Message = "Wrong Password",
-		//				Data = null
-		//			};
-		//		}
-		//		return new BaseResponse<UserDTO>
-		//		{
-		//			Status = true,
-		//			Message = "Login Successfull",
-		//			Data = new UserDTO
-		//			{
-		//				FullName = $"{user.LastName} {user.FirstName}",
-		//				Email = user.Email,
-		//				Gender = user.Gender.Value,
-		//				PhoneNumber = user.PhoneNumber,
-		//				ProfilePhotoUrl = user.ProfilePhotoUrl,
-		//				StaffNumber = user.Staff.StaffNumber,
-		//				Chat = user.Chat,
-		//			}
-		//		};
-		//	}
-		//	return new BaseResponse<UserDTO>
-		//	{
-		//		Status = false,
-		//		Message = "Wrong Input or User does not not exist",
-		//		Data = null
-		//	};
-		//}
 
-		public async Task<BaseResponse<UserDTO>> CheckForAnswerToSecurityQuestion(string email)
-		{
-			var user = await _userRepository.GetAsync(a => a.Email == email);
-			if (user == null)
-			{
-				return new BaseResponse<UserDTO>
-				{
-					Status = false,
-					Message = "User doe not exist",
-					Data = null
-				};
-			}
-			else
-			{
-				return new BaseResponse<UserDTO>
-				{
-					Status = true,
-					Data = new UserDTO
-					{
-						FullName = $"{user.LastName + user.FirstName}",
-						StaffNumber = user.Staff.StaffNumber,
-						Email = user.Email,
-						Gender = user.Gender.Value,
-						PhoneNumber = user.PhoneNumber,
-						ProfilePhotoUrl = user.ProfilePhotoUrl
-					},
-					Message = $"Successfull"
-				};
-			}
-		}
 
-		public async Task<User> GetUserAsyn(string email)
-		{
-			return await _userRepository.GetAsync(a => a.Email == email);
-		}
+        public async Task<UserDTO?> GetUserAsyn(string email)
+        {
+            var user = await _userRepository.GetAsync(a => a.Email == email);
+            var userDTO = user != null ? new UserDTO
+            {
+                Email = user.Email,
+                Id = user.Id,
+                Password = user.Password,
+            } : null;
 
-		public async Task<BaseResponse<UserDTO>> ReturnSecurityQuestionForgottenID(string email)
-		{
-			var user = await _userRepository.GetAsync(a => a.Email == email);
-			if (user == null)
-			{
-				return new BaseResponse<UserDTO>
-				{
-					Status = false,
-					Message = "User not found",
-					Data = null
+            return null;
+        }
 
-				};
-			}
-			return new BaseResponse<UserDTO>
-			{
-				Status = true,
-				Message = "Successful",
-				Data = new UserDTO
-				{
-					FullName = $"{user.LastName + user.FirstName}",
-					StaffNumber = user.Staff.StaffNumber,
-					Email = user.Email,
-					Gender = user.Gender.Value,
-					PhoneNumber = user.PhoneNumber,
-					ProfilePhotoUrl = user.ProfilePhotoUrl
-				}
-			};
-		}
 
-		public async Task DeleteUser(User user)
-		{
-			_userRepository.Delete(user);
-		}
-	}
+        public async Task<string> ReturnPassWord(string email)
+        {
+            var user = await _userRepository.GetAsync(a => a.Email == email);
+            return user != null ? user.Password : string.Empty;
+        }
+
+
+        public async Task<string> ReturnSecurityQuestionForgottenID(string email)
+        {
+            var user = await _userRepository.GetAsync(a => a.Email == email);
+            return user != null ? user.SecurityQuestion! : string.Empty;
+        }
+
+        public async Task DeleteUser(string id)
+        {
+            var user = await _userRepository.GetAsync(a => a.Id == id);
+            _userRepository.Delete(user);
+            await _unitOfWork.SaveAsync();
+        }
+
+
+        public async Task<UserDTO?> CreateUser(UserRegisterModel request)
+        {
+            var user = await _userRepository.GetAsync(a => a.Email == request.Email);
+            if (user != null)
+            {
+                return null;
+            }
+            var newUser = new User
+            {
+                Email = request.Email,
+                Password = request.Password,
+                SecurityAnswer = request.SecurityAnswer,
+                SecurityQuestion = request.SecurityQuestion,
+            };
+            var userReturned = await _userRepository.CreateAsync(newUser);
+            return new UserDTO
+            {
+                Email = userReturned.Email,
+                Password = userReturned.Password,
+                Id = userReturned.Id,
+            };
+
+        }
+
+        public async Task<UserDTO?> UpdateEmailPassword(string id, UserUpdateRequest request)
+        {
+            var user = await _userRepository.GetAsync(a => a.Id == id);
+            if (user == null) return null;
+            user.Email = request.Email ?? user.Email;
+            if (request.Password != request.ConfirmPassword) return null;
+            user.Password = request.Password;
+            await _unitOfWork.SaveAsync();
+            return new UserDTO
+            {
+                Email = user.Email,
+                Password = user.Password,
+                Id = id,
+            };
+        }
+
+    }
 }

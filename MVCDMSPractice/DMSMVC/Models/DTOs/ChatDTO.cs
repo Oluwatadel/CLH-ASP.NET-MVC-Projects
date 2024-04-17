@@ -8,14 +8,6 @@ namespace DMSMVC.Models.DTOs
         public string SenderEmail { get; set; }
         public string ReceiverEmail { get; set; }
         public User User { get; set; }
-        public ICollection<ChatContent> ChatContents { get; set; } = new HashSet<ChatContent>();
-    }
-
-    public class ChatRequestModel
-    {
-        public string? Id { get; set; }
-        public string SenderEmail { get; set; }
-        public string ReceiverEmail { get; set; }
-        public string? Message { get; set; }
+        public ICollection<ChatContent> ChatContents { get; set; } = new List<ChatContent>();
     }
 }

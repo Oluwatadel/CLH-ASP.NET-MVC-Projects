@@ -1,5 +1,6 @@
 ﻿using DMSMVC.Models.DTOs;
 using DMSMVC.Models.Entities;
+using DMSMVC.Models.RequestModel;
 using DMSMVC.Repository.Interface;
 using DMSMVC.Service.Interface;
 

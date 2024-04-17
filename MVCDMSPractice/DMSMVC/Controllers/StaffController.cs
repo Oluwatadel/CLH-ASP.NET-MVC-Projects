@@ -28,6 +28,12 @@ namespace DMSMVC.Controllers
         public async Task<IActionResult> SearchForAStaff(string emailOrStaffNumber)
         {
             var staff = await _staffService.GetStaffByStaffNumber(emailOrStaffNumber);
+            if (staff.Data == null)
+            {
+                TempData["Message"] = "Staff does not exist!!!";
+                return View();
+            }
+
             return RedirectToAction("StaffDetail", staff.Data);
         }
 
@@ -57,7 +63,7 @@ namespace DMSMVC.Controllers
             var staff = await _staffService.GetStaffById(id);
             if (staff == null)
             {
-                return View();
+                return RedirectToAction("Dashboard", "User");
             }
             var departments = await _departmentService.GetAllDepartment();
             TempData["Departments"] = departments.Data;

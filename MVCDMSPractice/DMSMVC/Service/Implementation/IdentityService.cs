@@ -1,4 +1,5 @@
 ﻿using DMSMVC.Models.DTOs;
+using DMSMVC.Models.RequestModel;
 using DMSMVC.Repository.Interface;
 using DMSMVC.Service.Interface;
 
@@ -19,7 +20,7 @@ namespace DMSMVC.Service.Implementation
 			return user.Staff.Department.DepartmentName;
 		}
 
-		public async Task<bool> IsCredentialsValid(LoginRequest loginRequest)
+		public async Task<bool> IsCredentialsValid(LoginRequestModel loginRequest)
 		{
 			var user = await _userRepository.GetAsync(a => a.Email == loginRequest.Email);
 			if(user != null)

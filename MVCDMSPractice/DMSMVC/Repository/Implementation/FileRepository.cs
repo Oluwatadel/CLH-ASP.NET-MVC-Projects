@@ -15,16 +15,16 @@ namespace DMSMVC.Repository.Implementation
         public string Upload(IFormFile file)
         {
             var uploadedFile = file.ContentType.Split('/');
-            var newFileName = $"{uploadedFile[0]}{Guid.NewGuid().ToString().Substring(1, 6)}{uploadedFile[1]}";
+            var newFileName = $"{uploadedFile[0]}{Guid.NewGuid().ToString().Substring(1, 6)}.{uploadedFile[1]}";
             var filePath = "";
 
             if (uploadedFile[1] == "doc" || uploadedFile[1] == "txt" || uploadedFile[1] == "xlsx" || uploadedFile[1] == "pdf")
             {
-                filePath = Path.Combine("~/", "Documents");
+                filePath = Path.Combine("~/wwwroot", "Documents");
             }
             else if(uploadedFile[1] == "jpg" || uploadedFile[1] == "jpeg" || uploadedFile[1] == "png")
             {
-                filePath = Path.Combine("~/", "userImages");
+                filePath = Path.Combine("~/wwwroot", "userImages");
             }
             if (!Directory.Exists(filePath))
             {

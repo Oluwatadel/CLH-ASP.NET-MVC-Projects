@@ -1,5 +1,6 @@
 ﻿using DMSMVC.Models.DTOs;
 using DMSMVC.Models.Entities;
+using DMSMVC.Models.RequestModel;
 using DMSMVC.Repository.Interface;
 using DMSMVC.Service.Interface;
 
@@ -26,9 +27,9 @@ namespace DMSMVC.Service.Implementation
 
         }
 
-        public async Task<bool> DeleteStaff(string email)
+        public async Task<bool> DeleteStaff(string id)
         {
-            var staff = await _staffRepository.GetAsync(a => a.User.Email == email);
+            var staff = await _staffRepository.GetAsync(a => a.Id == id);
             var user = await _userRepository.GetAsync(a => a.Id == staff.UserId);
             _staffRepository.Delete(staff);
             _userRepository.Delete(user);
@@ -36,136 +37,102 @@ namespace DMSMVC.Service.Implementation
             return true;
         }
 
-        public async Task<BaseResponse<ICollection<StaffDto>>> GetStaffs(string departmentID)
+        public async Task<ICollection<StaffDto>?> GetStaffs(string departmentID)
         {
             var staffs = await _staffRepository.GetAllAsync();
-            var staffsOfDepartment = staffs.Where(a => a.DepartmentId == departmentID).Select(p =>
+            return staffs != null ? staffs.Where(a => a.DepartmentId == departmentID).Select(p =>
             new StaffDto
             {
                 Id = p.Id,
-                FirstName = p.User.FirstName,
-                LastName =p.User.LastName,
-                Gender = (GenderEnum)p.User.Gender,
+                FirstName = p.FirstName,
+                LastName =p.LastName,
+                Gender = (GenderEnum)p.Gender!,
                 Email = p.User.Email,
                 DepartmentName = p.Department.DepartmentName,
                 StaffNumber = p.StaffNumber,
                 Level = p.Level,
-                Position = p.Position,
-                ImageUrl = p.User.ProfilePhotoUrl
-            }).ToList();
-            return new BaseResponse<ICollection<StaffDto>>
-            {
-                Status = true,
-                Message = "Successfull",
-                Data = staffsOfDepartment
-            };
+                Role = p.Role,
+                ImageUrl = p.ProfilePhotoUrl,
+                phonenumber = p.PhoneNumber
+            }).ToList() : null;
         }
 
-        public async Task<BaseResponse<StaffDto>> GetStaffById(string id)
+        public async Task<StaffDto?> GetStaffById(string id)
         {
-            var staff = await _staffRepository.GetAsync(a => a.Id == id);
-            return new BaseResponse<StaffDto>
+            var staff = await _staffRepository.GetAsync(p => p.Id == id);
+            return staff != null ? new StaffDto
             {
-                Status = true,
-                Message = $"Successfull",
-                Data = new StaffDto
-                {
-					Id = staff.Id,
-					FirstName = staff.User.FirstName,
-                    LastName = staff.User.LastName,
-                    Gender = (GenderEnum)staff.User.Gender,
-                    Email = staff.User.Email,
-					DepartmentName = staff.Department.DepartmentName,
-					StaffNumber = staff.StaffNumber,
-					Level = staff.Level,
-					Position = staff.Position,
-					ImageUrl = staff.User.ProfilePhotoUrl
-				}
-            };
+                Id = staff.Id,
+                FirstName = staff.FirstName,
+                LastName = staff.LastName,
+                Gender = (GenderEnum)staff.Gender!,
+                Email = staff.User.Email,
+                DepartmentName = staff.Department.DepartmentName,
+                StaffNumber = staff.StaffNumber,
+                Level = staff.Level,
+                Role = staff.Role,
+                ImageUrl = staff.ProfilePhotoUrl,
+                phonenumber = staff.PhoneNumber
+            } : null;
         }
 
-        public async Task<BaseResponse<StaffDto>> UpdateStaffAsync(string id, UserRequestModel userRequestModel)
+        public async Task<StaffDto?> UpdateStaffAsync(string id, StaffDetailsModel staffDetailsModel)
         {
             var staff = await _staffRepository.GetAsync(a => a.Id == id);
-            var department = await _departmentRepository.GetAsync(a => a.DepartmentName == userRequestModel.DepartmentName);
-            staff.StaffNumber = userRequestModel.StaffNumber ?? staff.StaffNumber;
+            var department = await _departmentRepository.GetAsync(a => a.DepartmentName == staffDetailsModel.DepartmentName);
+            if (staff  == null) return null;
+            staff.StaffNumber = staffDetailsModel.StaffNumber ?? staff.StaffNumber;
             staff.DepartmentId = department.Id;
             staff.Department = department;
-            staff.Level = userRequestModel.Level ?? staff.Level;
-            staff.User.FirstName = userRequestModel.FirstName ?? staff.User.FirstName;
-            staff.User.LastName = userRequestModel.FirstName ?? staff.User.LastName;
-            staff.User.Email = userRequestModel.Email ?? staff.User.Email;
-            staff.User.Gender = userRequestModel.Gender;
-            staff.User.ProfilePhotoUrl = _fileRepository.Upload(userRequestModel.ProfilePhotoUrl);
+            staff.Level = staffDetailsModel.Level ?? staff.Level;
+            staff.FirstName = staffDetailsModel.FirstName ?? staff.FirstName;
+            staff.LastName = staffDetailsModel.FirstName ?? staff.LastName;
+            staff.User.Email = staffDetailsModel.Email ?? staff.User.Email;
+            staff.Gender = staffDetailsModel.Gender;
+            staff.ProfilePhotoUrl = _fileRepository.Upload(staffDetailsModel.ProfilePhotoUrl);
             var staffToBeUpdated = _staffRepository.Update(staff);
             await _unitOfWork.SaveAsync();
-            return new BaseResponse<StaffDto>
+            return new StaffDto
             {
-                Status = true,
-                Message = "Update successful",
-                Data = new StaffDto
-                {
-                    Id = staff.Id,
-                    FirstName = staff.User.FirstName,
-                    LastName = staff.User.LastName,
-                    Gender = (GenderEnum)staff.User.Gender,
-                    Email = staff.User.Email,
-                    DepartmentName = staff.Department.DepartmentName,
-                    StaffNumber = staff.StaffNumber,
-                    Level = staff.Level,
-                    Position = staff.Position,
-                    ImageUrl = staff.User.ProfilePhotoUrl
-                }
+                Id = staff.Id,
+                FirstName = staff.FirstName,
+                LastName = staff.LastName,
+                Gender = (GenderEnum)staff.Gender!,
+                Email = staff.User.Email,
+                DepartmentName = staff.Department.DepartmentName,
+                StaffNumber = staff.StaffNumber,
+                Level = staff.Level,
+                Role = staff.Role,
+                ImageUrl = staff.ProfilePhotoUrl,
+                phonenumber = staff.PhoneNumber
             };
 
         }
 
-		public async Task<BaseResponse<StaffDto>> CreateAsync(UserRequestModel userRequestModel)
+		public async Task<BaseResponse<StaffDto>> CreateAsync(string id, StaffDetailsModel staffDetailsModel)
 		{
-            var userExist = _userRepository.IsExist(userRequestModel.Email);
-            var staffExist = await _staffRepository.GetAsync(a => a.StaffNumber == userRequestModel.StaffNumber);
-            if (staffExist != null || userExist)
+            var user = await _userRepository.GetAsync(a => a.Id == id);
+            var staffExist = await _staffRepository.GetAsync(a => a.StaffNumber == staffDetailsModel.StaffNumber);
+            if (staffExist != null)
             {
                 return new BaseResponse<StaffDto>
                 {
-                    Message = "Password does not match",
+                    Message = "Staff Exist",
                     Status = false,
-                    Data = new StaffDto
-                    {
-                        Id = staffExist.Id,
-                        StaffNumber = staffExist.StaffNumber,
-                        DepartmentName = staffExist.Department.DepartmentName,
-                        FirstName = staffExist.User.FirstName,
-                        LastName = staffExist.User.LastName,
-                        Email = staffExist.User.Email,
-                        Gender = (GenderEnum)staffExist.User.Gender,
-                        Level = staffExist.Level,
-                        Position = staffExist.Position,
-                        ImageUrl = staffExist.User.ProfilePhotoUrl
-                    }
                 };
             }
-			var user = new User
-			{
-				Email = userRequestModel.Email,
-				FirstName = userRequestModel.FirstName,
-				LastName = userRequestModel.LastName,
-				Gender = userRequestModel.Gender,
-				PhoneNumber = userRequestModel.PhoneNumber,
-				Password = userRequestModel.Password,
-				SecurityQuestion = userRequestModel.SecurityQuestion,
-				SecurityAnswer = userRequestModel.SecurityAnswer,
-				ProfilePhotoUrl = _fileRepository.Upload(userRequestModel.ProfilePhotoUrl),
-			};
-
-			var department = await _departmentRepository.GetAsync(a => a.DepartmentName == userRequestModel.DepartmentName)!;
+			//var department = await _departmentRepository.GetAsync(a => a.DepartmentName == staffDetailsModel.DepartmentName)!;
 			var staffAdded = new Staff
 			{
                 UserId = user.Id,
-				Department = department,
-				DepartmentId = department.Id,
-				Level = userRequestModel.Level,
-				StaffNumber = userRequestModel.StaffNumber
+				Level = staffDetailsModel.Level,
+				StaffNumber = staffDetailsModel.StaffNumber!,
+                FirstName = staffDetailsModel.FirstName,
+                LastName = staffDetailsModel.LastName,
+                Gender = staffDetailsModel.Gender,
+                PhoneNumber = staffDetailsModel.PhoneNumber,
+                ProfilePhotoUrl = _fileRepository.Upload(staffDetailsModel.ProfilePhotoUrl),
+                User = user,
 			};
 			await _userRepository.CreateAsync(user);
             await _staffRepository.CreateAsync(staffAdded);
@@ -177,15 +144,15 @@ namespace DMSMVC.Service.Implementation
 				Data = new StaffDto
 				{
                     Id = staffAdded.Id,
-					FirstName = user.FirstName,
-                    LastName = user.LastName,
+					FirstName = staffAdded.FirstName,
+                    LastName = staffAdded.LastName,
                     Email = user.Email,
-                    Gender = userRequestModel.Gender,
-                    ImageUrl = user.ProfilePhotoUrl,
+                    Gender = staffDetailsModel.Gender,
+                    ImageUrl = staffAdded.ProfilePhotoUrl,
                     StaffNumber = staffAdded.StaffNumber,
                     DepartmentName = staffAdded.Department.DepartmentName,
                     Level = staffAdded.Level,
-                    Position = staffAdded.Position,
+                    Role = staffAdded.Role,
 				}
 			};
 
@@ -211,15 +178,15 @@ namespace DMSMVC.Service.Implementation
                 Data = new StaffDto
                 {
                     Id = staff.Id,
-                    FirstName = staff.User.FirstName,
-                    LastName = staff.User.LastName,
-                    Gender = (GenderEnum)staff.User.Gender,
+                    FirstName = staff.FirstName,
+                    LastName = staff.LastName,
+                    Gender = (GenderEnum)staff.Gender!,
                     Email = staff.User.Email,
                     DepartmentName = staff.Department.DepartmentName,
                     StaffNumber = staff.StaffNumber,
                     Level = staff.Level,
-                    Position = staff.Position,
-                    ImageUrl = staff.User.ProfilePhotoUrl
+                    Role = staff.Role,
+                    ImageUrl = staff.ProfilePhotoUrl
                 }
             };
         }

@@ -14,12 +14,8 @@ namespace DMSMVC.Context.EntityConfiguration
                 new User
                 {
                     Id = "9a07d60f--4930-8e8b1629",
-                    FirstName = "admin",
-                    LastName = "admin",
                     Email = "admin@gmail.com",
-                    Gender = GenderEnum.Male,
-                    Password = "123456",
-                    PhoneNumber = "1234567890",
+                    Password = "pa$$word",
                 });
         }
     }

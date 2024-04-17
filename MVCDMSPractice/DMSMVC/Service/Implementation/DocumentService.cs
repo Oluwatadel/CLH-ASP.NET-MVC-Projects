@@ -1,5 +1,6 @@
 ﻿using DMSMVC.Models.DTOs;
 using DMSMVC.Models.Entities;
+using DMSMVC.Models.RequestModel;
 using DMSMVC.Repository.Implementation;
 using DMSMVC.Repository.Interface;
 using DMSMVC.Service.Interface;
@@ -14,15 +15,14 @@ namespace DMSMVC.Service.Implementation
         private readonly IUnitOfWork _unitOfWork;
         private readonly IFileRepository _fileRepository;
 
-        public DocumentService(IDocumentRepository documentRepository, IDepartmentRepository departmentRepository, IStaffRepository staffRepository, IFileRepository fileRepository)
+        public DocumentService(IDocumentRepository documentRepository, IDepartmentRepository departmentRepository, IStaffRepository staffRepository, IUnitOfWork unitOfWork, IFileRepository fileRepository)
         {
             _documentRepository = documentRepository;
             _departmentRepository = departmentRepository;
             _staffRepository = staffRepository;
+            _unitOfWork = unitOfWork;
             _fileRepository = fileRepository;
-
-		}
-
+        }
 
         public async Task<BaseResponse<DocumentDTO>> CreateAsync(Staff staff, DocumentRequestModel request)
         {
@@ -32,11 +32,11 @@ namespace DMSMVC.Service.Implementation
             {
 				var documentToUpload = new Document
 				{
-					Title = $"{request.Title}copy by {staff.User.FirstName}",
+					Title = $"{request.Title}copy by {staff.FirstName}",
 					Description = request.Description!,
 					DepartmentId = staff.DepartmentId,
 					DocumentUrl = _fileRepository.Upload(request.file),
-					Author = staff.User.LastName + " " + staff.User.LastName,
+					Author = staff.LastName + " " + staff.LastName,
 					IsDeleted = request.IsDeleted
 				};
 				await _documentRepository.CreateAsync(documentToUpload);
@@ -61,7 +61,7 @@ namespace DMSMVC.Service.Implementation
                 Description = request.Description!,
                 DepartmentId = staff.DepartmentId,
                 DocumentUrl = _fileRepository.Upload(request.file),
-                Author = staff.User.LastName + " " + staff.User.LastName,
+                Author = staff.LastName + " " + staff.LastName,
                 IsDeleted = request.IsDeleted
             };
             await _documentRepository.CreateAsync(documentUploaded);

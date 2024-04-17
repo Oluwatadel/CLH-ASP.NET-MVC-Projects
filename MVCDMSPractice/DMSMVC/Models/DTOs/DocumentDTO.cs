@@ -16,22 +16,7 @@ namespace DMSMVC.Models.DTOs
         public string? DepartmentName { get; set; } = default!;
     }
 
-    public class DocumentRequestModel
-    {
-        [Required]
-        public string? Title { get; set; }
-        public string? Description { get; set; }
-        [Required]
-        public IFormFile file { get; set; }
-        public string? Author { get; set; }
-        public string? Password { get; set; }
-        public bool IsDeleted { get; set; } = default;
-    }
+    
 
-    public class UpdateModel
-    {
-        public string Title { get; set; }
-        public string? Description { get; set; }
-        public IFormFile DocumentUrl { get; set; } = default!;
-    }
+    
 }

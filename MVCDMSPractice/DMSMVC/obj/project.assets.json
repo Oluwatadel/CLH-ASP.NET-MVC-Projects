@@ -7452,11 +7452,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MVCDMSPractice\\DMSMVC\\DMSMVC.csproj",
+      "projectUniqueName": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\classes in sprint\\CLH-MVC-Proj-SDMS\\MVCDMSPractice\\DMSMVC\\DMSMVC.csproj",
       "projectName": "DMSMVC",
-      "projectPath": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MVCDMSPractice\\DMSMVC\\DMSMVC.csproj",
+      "projectPath": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\classes in sprint\\CLH-MVC-Proj-SDMS\\MVCDMSPractice\\DMSMVC\\DMSMVC.csproj",
       "packagesPath": "C:\\Users\\AIRIS TECHNOVATION\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\Csharp-Journey\\classes in sprint\\AspDotNet\\MVCDMSPractice\\DMSMVC\\obj\\",
+      "outputPath": "C:\\Users\\AIRIS TECHNOVATION\\OneDrive\\CodeLearnersHub\\classes in sprint\\CLH-MVC-Proj-SDMS\\MVCDMSPractice\\DMSMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

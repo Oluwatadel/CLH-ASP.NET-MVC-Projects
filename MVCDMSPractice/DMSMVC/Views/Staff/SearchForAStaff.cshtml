@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
 </head>
 <body>
+    @if(TempData["Message"] != null)
+    {
+        <span class="alert">@TempData["Message"]</span>
+    }
     <div class="contain">
         <div class="containerbox">
             <div class="container">
